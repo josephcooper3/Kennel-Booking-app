@@ -3,17 +3,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleFormSubmit = function (event) {
     event.preventDefault();
 
-    const dogName = event.target.dog_name.value;
-    const dogBreed = event.target.dog_breed.value;
-    const dateBookedUntil = event.target.date.value;
-
-    const dogDetails = `${dogName} the ${dogBreed} is booked in kennels until ${dateBookedUntil}!`;
-
     const bookedList = document.querySelector('.booked-list');
-    const newListItem = document.createElement('tr');
-    bookedList.appendChild(newListItem);
-    newListItem.classList.add('dog-booked');
-    newListItem.textContent = dogDetails;
+    
+    const newTableRow = document.createElement('tr');
+    bookedList.appendChild(newTableRow);
+    
+    const dogName = event.target.dog_name.value;
+    const nameCell = document.createElement('td');
+    nameCell.textContent = dogName;
+    newTableRow.appendChild(nameCell);
+    
+    const dogBreed = event.target.dog_breed.value;
+    const breedCell = document.createElement('td');
+    breedCell.textContent = dogBreed;
+    newTableRow.appendChild(breedCell);
+
+    const dateUntil = event.target.date.value;
+    const dateUntilCell = document.createElement('td');
+    dateUntilCell.textContent = dateUntil;
+    newTableRow.appendChild(dateUntilCell)
 
     event.target.reset()
   };
