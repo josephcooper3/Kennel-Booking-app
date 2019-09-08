@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const dogName = event.target.dog_name.value;
     const nameCell = document.createElement('td');
-    nameCell.textContent = dogName;
+    nameCell.textContent = `🐶 ${dogName}`;
     newTableRow.appendChild(nameCell);
     
     const dogBreed = event.target.dog_breed.value;

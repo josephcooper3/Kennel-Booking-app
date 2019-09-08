@@ -1,0 +1,21 @@
+body {
+    font-family: 'Livvic', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: darkgrey;
+}
+
+th, td {
+    text-align: left;
+    border: 1px solid;
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: lightgrey;
+}
