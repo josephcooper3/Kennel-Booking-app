@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  const bookedList = document.querySelector('.booked-list');
+  
   const handleFormSubmit = function (event) {
     event.preventDefault();
-
-    const bookedList = document.querySelector('.booked-list');
     
     const newTableRow = document.createElement('tr');
     bookedList.appendChild(newTableRow);
@@ -28,10 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
     dateUntilCell.textContent = dateUntil;
     newTableRow.appendChild(dateUntilCell);
 
-    event.target.reset()
+    event.target.reset();
   };
 
   const form = document.querySelector('form');
   form.addEventListener('submit', handleFormSubmit);
 
+  const handleDeleteAllButton = function () {
+    bookedList.innerHTML = '';
+  };
+
+  const deleteAllButton = document.querySelector('#delete_all');
+  deleteAllButton.addEventListener('click', handleDeleteAllButton);
 });
