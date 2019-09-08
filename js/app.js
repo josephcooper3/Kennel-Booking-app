@@ -18,10 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
     breedCell.textContent = dogBreed;
     newTableRow.appendChild(breedCell);
 
-    const dateUntil = event.target.date.value;
+    const dateFrom = event.target.date_from.value;
+    const dateFromCell = document.createElement('td');
+    dateFromCell.textContent = dateFrom;
+    newTableRow.appendChild(dateFromCell);
+
+    const dateUntil = event.target.date_until.value;
     const dateUntilCell = document.createElement('td');
     dateUntilCell.textContent = dateUntil;
-    newTableRow.appendChild(dateUntilCell)
+    newTableRow.appendChild(dateUntilCell);
 
     event.target.reset()
   };
