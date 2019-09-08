@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <script src="js/app.js" charset="utf-8"></script>
   <title></title>
 </head>
+
 <body>
   <div class="title">
     <h1>Dogs Booked in Kennels</h1>
@@ -32,11 +34,19 @@
     </form>
   </div>
   <div class="booked-list-wrapper">
-    <h3>Dogs Currently Booked</h3>
-    <ul class = "booked-list"></ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Dogs Currently Booked</th>
+        </tr>
+      </thead>
+      <tbody class="booked-list">
+      </tbody>
+    </table>
   </div>
   <div class="delete-button">
     <button type="button" name="delete_all">Delete All</button>
   </div>
 </body>
+
 </html>

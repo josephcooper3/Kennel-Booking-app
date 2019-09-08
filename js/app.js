@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dogDetails = `${dogName} the ${dogBreed} is booked in kennels until ${dateBookedUntil}!`;
 
     const bookedList = document.querySelector('.booked-list');
-    const newListItem = document.createElement('li');
+    const newListItem = document.createElement('tr');
     bookedList.appendChild(newListItem);
     newListItem.classList.add('dog-booked');
     newListItem.textContent = dogDetails;
